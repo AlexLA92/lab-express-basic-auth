@@ -1,2 +1,15 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
+
+<div><a href="/auth/signup">Sign up</a></div>
+<div><a href="/auth/login">Login</a></div>
+<div><a href="/auth/logout">Logout</a></div>
+<div><a href="/main">Public image</a></div>
+<div><a href="/private">! Adult only !</a></div>
+
+<div>
+{{#if loginMessage}}
+    {{loginMessage}}    
+{{/if}}
+</div>
+

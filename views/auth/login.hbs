@@ -1,0 +1,23 @@
+<h1>LOGIN</h1>
+<form action="/auth/login" method="POST">
+    <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password">
+        <input type="hidden" name="originUrl" value="{{originUrl}}">
+    </div>
+        <input type="submit" value = "LOGIN">
+</form>
+<div>
+    {{#if errorMessage}}
+        {{errorMessage}}
+    {{/if}}
+</div>
+<div>
+    {{#if originUrl}}
+        You tried to access to "{{originUrl}}" but first you need to login
+    {{/if}}
+</div>
